@@ -16,7 +16,11 @@ class A extends Component {
       <div className="App">
         <h1>A</h1>
         <B1 value={this.state.value} />
-        <B2 />
+        <B2>
+          <div className="c4">
+            <h3>C4</h3>
+          </div>
+        </B2>
       </div>
     );
   }
@@ -40,6 +44,7 @@ class B2 extends PureComponent {
       <div className="b2">
         <h2>B2</h2>
         <C3 />
+        {this.props.children}
       </div>
     );
   }
