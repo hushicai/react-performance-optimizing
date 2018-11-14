@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 
 class A extends Component {
   state = {
@@ -34,10 +34,7 @@ class B1 extends Component {
   }
 }
 
-class B2 extends Component {
-  shouldComponentUpdate() {
-    return false;
-  }
+class B2 extends PureComponent {
   render() {
     return (
       <div className="b2">
@@ -48,10 +45,7 @@ class B2 extends Component {
   }
 }
 
-class C1 extends Component {
-  shouldComponentUpdate() {
-    return false;
-  }
+class C1 extends PureComponent {
   render() {
     return (
       <div className="c1">
@@ -72,10 +66,7 @@ class C2 extends Component {
   }
 }
 
-class C3 extends Component {
-  shouldComponentUpdate() {
-    return false;
-  }
+class C3 extends PureComponent {
   render() {
     return (
       <div className="c3">
