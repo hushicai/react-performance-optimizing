@@ -11,16 +11,19 @@ class A extends Component {
       });
     }, 5000);
   }
+
+  b2Children = (
+    <div className="c4">
+      <h3>C4</h3>
+    </div>
+  )
+
   render() {
     return (
       <div className="App">
         <h1>A</h1>
         <B1 value={this.state.value} />
-        <B2>
-          <div className="c4">
-            <h3>C4</h3>
-          </div>
-        </B2>
+        <B2>{this.b2Children}</B2>
       </div>
     );
   }
