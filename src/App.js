@@ -18,12 +18,17 @@ class A extends Component {
     </div>
   )
 
+  onCallback() {}
+
   render() {
     return (
       <div className="App">
         <h1>A</h1>
         <B1 value={this.state.value} />
-        <B2>{this.b2Children}</B2>
+        <B2 onCallback={this.onCallback.bind(this)} />
+        <B2 onCallback={() => {
+          console.log('callback');
+        }}>{this.b2Children}</B2>
       </div>
     );
   }
